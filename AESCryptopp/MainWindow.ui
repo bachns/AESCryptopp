@@ -1,28 +1,422 @@
-<UI version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>MainWindowClass</class>
- <widget class="QMainWindow" name="MainWindowClass" >
-  <property name="objectName" >
-   <string notr="true">MainWindowClass</string>
-  </property>
-  <property name="geometry" >
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>1400</width>
+    <height>800</height>
    </rect>
   </property>
-  <property name="windowTitle" >
-   <string>MainWindow</string>
-  </property>  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  <property name="windowTitle">
+   <string>AESCryptopp [ Ngọc Kiều ]</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MainWindow.qrc">
+    <normaloff>:/icons/AESCryptopp.svg</normaloff>:/icons/AESCryptopp.svg</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QGroupBox" name="plainGroupBox">
+        <property name="title">
+         <string>Bản rõ</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <property name="leftMargin">
+          <number>2</number>
+         </property>
+         <property name="topMargin">
+          <number>2</number>
+         </property>
+         <property name="rightMargin">
+          <number>2</number>
+         </property>
+         <property name="bottomMargin">
+          <number>2</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QPlainTextEdit" name="plainTextEdit">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="plainLoadButton">
+          <property name="text">
+           <string>Chọn</string>
+          </property>
+          <property name="icon">
+           <iconset resource="MainWindow.qrc">
+            <normaloff>:/icons/add.svg</normaloff>:/icons/add.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="plainSaveButton">
+          <property name="text">
+           <string>Lưu</string>
+          </property>
+          <property name="icon">
+           <iconset resource="MainWindow.qrc">
+            <normaloff>:/icons/save.svg</normaloff>:/icons/save.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="plainClearButton">
+          <property name="text">
+           <string>Xóa</string>
+          </property>
+          <property name="icon">
+           <iconset resource="MainWindow.qrc">
+            <normaloff>:/icons/clear.svg</normaloff>:/icons/clear.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="encryptButton">
+          <property name="text">
+           <string>Mã hóa &gt;</string>
+          </property>
+          <property name="icon">
+           <iconset resource="MainWindow.qrc">
+            <normaloff>:/icons/encryption.svg</normaloff>:/icons/encryption.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="title">
+         <string>Bản mã</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <property name="leftMargin">
+          <number>2</number>
+         </property>
+         <property name="topMargin">
+          <number>2</number>
+         </property>
+         <property name="rightMargin">
+          <number>2</number>
+         </property>
+         <property name="bottomMargin">
+          <number>2</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QPlainTextEdit" name="cipherTextEdit">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="cipherLoadButton">
+          <property name="text">
+           <string>Chọn</string>
+          </property>
+          <property name="icon">
+           <iconset resource="MainWindow.qrc">
+            <normaloff>:/icons/add.svg</normaloff>:/icons/add.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="cipherSaveButton">
+          <property name="text">
+           <string>Lưu</string>
+          </property>
+          <property name="icon">
+           <iconset resource="MainWindow.qrc">
+            <normaloff>:/icons/save.svg</normaloff>:/icons/save.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="cipherClearButton">
+          <property name="text">
+           <string>Xóa</string>
+          </property>
+          <property name="icon">
+           <iconset resource="MainWindow.qrc">
+            <normaloff>:/icons/clear.svg</normaloff>:/icons/clear.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="decryptButton">
+          <property name="text">
+           <string>Giải mã &gt;</string>
+          </property>
+          <property name="icon">
+           <iconset resource="MainWindow.qrc">
+            <normaloff>:/icons/key.svg</normaloff>:/icons/key.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="2">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="title">
+         <string>Bản giải mã</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <property name="leftMargin">
+          <number>2</number>
+         </property>
+         <property name="topMargin">
+          <number>2</number>
+         </property>
+         <property name="rightMargin">
+          <number>2</number>
+         </property>
+         <property name="bottomMargin">
+          <number>2</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QPlainTextEdit" name="recoveredTextEdit">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QPushButton" name="recoveredSaveButton">
+          <property name="text">
+           <string>Lưu</string>
+          </property>
+          <property name="icon">
+           <iconset resource="MainWindow.qrc">
+            <normaloff>:/icons/save.svg</normaloff>:/icons/save.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="recoveredClearButton">
+          <property name="text">
+           <string>Xóa</string>
+          </property>
+          <property name="icon">
+           <iconset resource="MainWindow.qrc">
+            <normaloff>:/icons/clear.svg</normaloff>:/icons/clear.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>138</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0" colspan="3">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="4">
+       <widget class="QComboBox" name="keySizeComboBox">
+        <item>
+         <property name="text">
+          <string>128-bit</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>192-bit</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>256-bit</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="5" rowspan="2">
+       <widget class="QPushButton" name="generateKeyButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Tạo khóa</string>
+        </property>
+        <property name="icon">
+         <iconset resource="MainWindow.qrc">
+          <normaloff>:/icons/generation.svg</normaloff>:/icons/generation.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="keyLoadButton">
+        <property name="text">
+         <string>Chọn</string>
+        </property>
+        <property name="icon">
+         <iconset resource="MainWindow.qrc">
+          <normaloff>:/icons/add.svg</normaloff>:/icons/add.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="ivSaveButton">
+        <property name="text">
+         <string>Lưu</string>
+        </property>
+        <property name="icon">
+         <iconset resource="MainWindow.qrc">
+          <normaloff>:/icons/save.svg</normaloff>:/icons/save.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3" colspan="2">
+       <widget class="QLineEdit" name="ivLineEdit"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Khóa bí mật (key):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="keySaveButton">
+        <property name="text">
+         <string>Lưu</string>
+        </property>
+        <property name="icon">
+         <iconset resource="MainWindow.qrc">
+          <normaloff>:/icons/save.svg</normaloff>:/icons/save.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="ivLoadButton">
+        <property name="text">
+         <string>Chọn</string>
+        </property>
+        <property name="icon">
+         <iconset resource="MainWindow.qrc">
+          <normaloff>:/icons/add.svg</normaloff>:/icons/add.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Vector khởi tạo (IV)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="keyLineEdit"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>keyLoadButton</tabstop>
+  <tabstop>keySaveButton</tabstop>
+  <tabstop>keyLineEdit</tabstop>
+  <tabstop>keySizeComboBox</tabstop>
+  <tabstop>ivLoadButton</tabstop>
+  <tabstop>ivSaveButton</tabstop>
+  <tabstop>ivLineEdit</tabstop>
+  <tabstop>generateKeyButton</tabstop>
+  <tabstop>plainTextEdit</tabstop>
+  <tabstop>cipherTextEdit</tabstop>
+  <tabstop>recoveredTextEdit</tabstop>
+  <tabstop>plainLoadButton</tabstop>
+  <tabstop>plainSaveButton</tabstop>
+  <tabstop>cipherLoadButton</tabstop>
+  <tabstop>cipherSaveButton</tabstop>
+  <tabstop>recoveredSaveButton</tabstop>
+ </tabstops>
  <resources>
-   <include location="MainWindow.qrc"/>
+  <include location="MainWindow.qrc"/>
  </resources>
  <connections/>
-</UI>
+</ui>

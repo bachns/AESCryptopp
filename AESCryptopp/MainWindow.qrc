@@ -1,4 +1,12 @@
 <RCC>
-    <qresource prefix="MainWindow">
-    </qresource>
+  <qresource prefix="/">
+    <file>icons/AESCryptopp.svg</file>
+    <file>icons/clear.svg</file>
+    <file>icons/encryption.svg</file>
+    <file>icons/generation.svg</file>
+    <file>icons/save.svg</file>
+    <file>icons/add.svg</file>
+    <file>icons/iv.svg</file>
+    <file>icons/key.svg</file>
+  </qresource>
 </RCC>
