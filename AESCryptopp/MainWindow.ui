@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>AESCryptopp [ Ngọc Kiều ]</string>
+   <string>AESCryptopp</string>
   </property>
   <property name="windowIcon">
    <iconset resource="MainWindow.qrc">
